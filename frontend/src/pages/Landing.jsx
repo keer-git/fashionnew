@@ -27,7 +27,7 @@ export default function Landing() {
       <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 60px', borderBottom: '1px solid rgba(214,197,171,0.7)', position: 'sticky', top: 0, background: 'rgba(255,249,243,0.98)', backdropFilter: 'blur(10px)', zIndex: 100 }}>
         <div style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: 22 }}>
           <span style={{ color: '#C9A84C', fontWeight: 600, letterSpacing: '0.1em' }}>VOGUE</span>
-          <span style={{ color: '#fff', fontWeight: 300, letterSpacing: '0.1em' }}>VISION</span>
+          <span style={{ color: '#151111f4', fontWeight: 300, letterSpacing: '0.1em' }}>VISION</span>
         </div>
         <div style={{ display: 'flex', gap: 32, fontSize: 13, color: '#666' }}>
           {['Features', 'About', 'Contact'].map(l => (
