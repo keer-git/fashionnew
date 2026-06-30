@@ -3,6 +3,7 @@ import DashboardLayout from '../../components/DashboardLayout'
 import { Badge, Spinner, Modal, FormField, BtnPrimary, BtnGhost, PageHeader, SearchBar } from '../../components/UI'
 import api from '../../utils/api'
 import toast from 'react-hot-toast'
+import Swal from 'sweetalert2'
 
 const EMPTY = { name: '', email: '', password: '', role: 'designer', status: 'active' }
 
@@ -34,10 +35,29 @@ export default function UserManagement() {
     finally { setSaving(false) }
   }
 
-  const del = async id => {
-    if (!confirm('Delete this user?')) return
-    await api.delete(`/users/${id}`); toast.success('User deleted'); load()
+  const del = async (id) => {
+    const result = await Swal.fire({
+      title: 'Delete User?',
+      text: 'Are you sure you want to delete this user?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Delete',
+      cancelButtonText: 'Cancel',
+      confirmButtonColor: '#8B5E3C',
+      cancelButtonColor: '#6B7280',
+      reverseButtons: true
+  })
+
+  if (!result.isConfirmed) return
+
+  try {
+    await api.delete(`/users/${id}`)
+    toast.success('User deleted successfully')
+    load()
+  } catch (err) {
+    toast.error('Failed to delete user')
   }
+}
 
   const toggle = async id => {
     await api.patch(`/users/${id}/toggle-status`); toast.success('Status updated'); load()

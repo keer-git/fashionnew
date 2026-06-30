@@ -14,6 +14,7 @@ import { CategoryManagement, ProductManagement } from './pages/admin/Categories'
 
 import { DesignerDashboard, ProductExplorer, FavoriteDesigns, TrendOverview } from './pages/designer/index'
 import { RetailDashboard, AnalyticsDashboard, TrendInsights, Reports } from './pages/retail/index'
+import ColorPalette from './pages/designer/ColorPalette'
 
 function RoleRedirect() {
   const { user } = useAuth()
@@ -51,7 +52,7 @@ export default function App() {
         <Route path='/designer/explorer'  element={<ProtectedRoute roles={['designer']}><ProductExplorer /></ProtectedRoute>} />
         <Route path='/designer/favorites' element={<ProtectedRoute roles={['designer']}><FavoriteDesigns /></ProtectedRoute>} />
         <Route path='/designer/trends'    element={<ProtectedRoute roles={['designer']}><TrendOverview /></ProtectedRoute>} />
-
+        <Route path='/designer/color-palette'   element={<ProtectedRoute roles={['designer']}><ColorPalette /></ProtectedRoute>} />
         {/* Retail */}
         <Route path='/retail'           element={<ProtectedRoute roles={['retail']}><RetailDashboard /></ProtectedRoute>} />
         <Route path='/retail/analytics' element={<ProtectedRoute roles={['retail']}><AnalyticsDashboard /></ProtectedRoute>} />

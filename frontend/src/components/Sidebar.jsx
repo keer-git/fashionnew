@@ -15,6 +15,7 @@ const NAV = {
     { path: '/designer/explorer',  icon: '🔍', label: 'Product Explorer'  },
     { path: '/designer/favorites', icon: '♥',  label: 'Favourite Designs' },
     { path: '/designer/trends',    icon: '📈', label: 'Trend Overview'    },
+    { path: '/designer/color-palette', icon: '🎨', label: 'Color Palette' },
   ],
   retail: [
     { path: '/retail',            icon: '⬛', label: 'Dashboard'     },

@@ -97,6 +97,8 @@ export function ProductExplorer() {
             {colors.map(c => <option key={c}>{c}</option>)}
           </select>
           <select value={filters.season} onChange={e => setFilters({ ...filters, season: e.target.value })} style={{ background: 'rgba(255,249,243,0.98)', border: '1px solid rgba(214,197,171,0.7)', borderRadius: 12, padding: '10px 14px', color: '#1f1a16', fontSize: 13 }}>
+            {seasons.map(s => <option key={s}>{s}</option>)}
+          </select>
       </div>
 
       {loading ? <div style={{ textAlign: 'center', padding: 60 }}><Spinner /></div> : (
