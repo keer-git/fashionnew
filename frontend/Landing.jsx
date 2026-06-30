@@ -106,16 +106,86 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Contact */}
-      <section id='contact' style={{ padding: '80px 60px', textAlign: 'center' }}>
-        <div style={{ color: '#B98A3C', fontSize: 11, letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: 16 }}>Contact</div>
-        <h2 style={{ fontSize: 32, fontWeight: 600, margin: '0 0 12px' }}>Get In Touch</h2>
-        <p style={{ color: '#4f463d', fontSize: 14, marginBottom: 36 }}>Questions about VogueVision? We'd love to hear from you.</p>
-        <div style={{ display: 'flex', gap: 12, maxWidth: 440, margin: '0 auto' }}>
-          <input placeholder='Your email address' style={{ flex: 1, background: '#fff8f1', border: '1px solid rgba(214,197,171,0.9)', borderRadius: 12, padding: '12px 16px', color: '#1f1a16', fontSize: 14 }} />
-          <button style={{ background: '#B98A3C', color: '#1f1a16', border: 'none', padding: '12px 24px', borderRadius: 12, fontSize: 13, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}>Send</button>
-        </div>
-      </section>
+      {/* Support */}
+<section id="contact" style={{ padding: '80px 60px', textAlign: 'center' }}>
+  <div
+    style={{
+      color: '#B98A3C',
+      fontSize: 11,
+      letterSpacing: '0.3em',
+      textTransform: 'uppercase',
+      marginBottom: 16
+    }}
+  >
+    Support
+  </div>
+
+  <h2 style={{ fontSize: 32, fontWeight: 600, marginBottom: 16 }}>
+    Need Assistance?
+  </h2>
+
+  <p
+    style={{
+      color: '#4f463d',
+      fontSize: 15,
+      maxWidth: 600,
+      margin: '0 auto 30px',
+      lineHeight: 1.8
+    }}
+  >
+    If you experience login issues, technical problems, or have questions
+    about VogueVision, please contact the system administrator.
+  </p>
+
+  <div
+    style={{
+      background: '#fff8f1',
+      border: '1px solid rgba(214,197,171,0.9)',
+      borderRadius: 16,
+      maxWidth: 450,
+      margin: '0 auto',
+      padding: '24px'
+    }}
+  >
+    <p style={{ margin: '10px 0', fontSize: 15 }}>
+      📧{' '}
+      <a
+        href="mailto:admin@voguevision.com"
+        style={{
+          color: '#B98A3C',
+          textDecoration: 'none',
+          fontWeight: 600
+        }}
+      >
+        admin@voguevision.com
+      </a>
+    </p>
+
+    <p style={{ margin: '10px 0', fontSize: 15 }}>
+      📞{' '}
+      <a
+        href="tel:+919876543210"
+        style={{
+          color: '#B98A3C',
+          textDecoration: 'none',
+          fontWeight: 600
+        }}
+      >
+        +91 98765 43210
+      </a>
+    </p>
+
+    <p
+      style={{
+        marginTop: 20,
+        color: '#666',
+        fontSize: 13
+      }}
+    >
+      Support Hours: Monday – Friday | 9:00 AM – 5:00 PM
+    </p>
+  </div>
+</section>
 
       {/* Footer */}
       <footer style={{ borderTop: '1px solid #111', padding: '36px 60px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
